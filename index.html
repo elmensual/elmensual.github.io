@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Mensual</title>
+<meta name="description" content="Comprá El Mensual por mayor, online o en un local cerca tuyo.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="El Mensual">
+<meta property="og:title" content="El Mensual">
+<meta property="og:description" content="Comprá por mayor, online o en un local cerca tuyo.">
+<meta property="og:image" content="compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="El Mensual. Comprá por mayor, online o en un local cerca tuyo.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="icon" type="image/png" href="icono.png">
+<link rel="apple-touch-icon" href="icono.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zalando+Sans:wght@400;500;700&family=Zalando+Sans+Expanded:wght@700;800&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#FFFFFF}
+body{font-family:'Zalando Sans',Arial,sans-serif;color:#000000;-webkit-font-smoothing:antialiased}
+.tope{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid #E6E6E3}
+.tope button{font:inherit;color:#000000;background:none;border:0;padding:0;margin:0;cursor:pointer;-webkit-appearance:none;appearance:none}
+.tope button:focus-visible{outline:2px solid #000000;outline-offset:3px}
+.tope .volver{grid-column:1;justify-self:start;font-size:14px}
+.tope .volver:hover{text-decoration:underline}
+.tope .volver[hidden]{display:none}
+.tope .marca{grid-column:2;justify-self:center;font-family:'Zalando Sans Expanded','Zalando Sans',Arial,sans-serif;font-weight:700;font-size:20px;letter-spacing:-.01em;white-space:nowrap}
+.contenido{max-width:1180px;margin:0 auto;padding:24px 16px 56px}
+.pie{border-top:1px solid #E6E6E3;padding:22px 20px;text-align:center;font-size:13px;color:#5E5E5E}
+@media (min-width:900px){.tope{padding:22px 40px}.contenido{padding:40px 32px 72px}}
+@media (max-width:420px){.tope .volver{font-size:13px}.tope .marca{font-size:17px}}
+
+#mym-root{--mym-principal:#000000;--mym-texto-boton:#FFFFFF;--mym-fondo:#F1F1EE;--mym-tinta:#000000;--mym-gris:#5E5E5E;--mym-borde:#D6D6D2;--mym-error:#B3261E;display:block;margin:0;color:var(--mym-tinta);font-family:inherit;font-size:16px;line-height:1.55;text-align:left}
+#mym-root,#mym-root *,#mym-root *::before,#mym-root *::after{box-sizing:border-box}
+#mym-root h2,#mym-root h3,#mym-root p,#mym-root ol,#mym-root li,#mym-root form,#mym-root label,#mym-root span,#mym-root strong{margin:0;padding:0;border:0;background:none;list-style:none;text-transform:none;letter-spacing:normal;font-size:inherit;font-weight:inherit;line-height:inherit;color:inherit;text-align:inherit}
+#mym-root input,#mym-root select,#mym-root button{font-family:inherit;margin:0;text-transform:none;letter-spacing:normal;box-shadow:none;min-height:0;max-width:none;float:none}
+
+#mym-root .mym-panel{display:grid;grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "form" "catalogo" "extra";gap:32px;background:var(--mym-fondo);border-radius:24px;padding:32px 18px}
+#mym-root .mym-intro{grid-area:intro}
+#mym-root .mym-card{grid-area:form}
+#mym-root .mym-extra{grid-area:extra}
+#mym-root .mym-a-catalogo{grid-area:catalogo}
+@media (min-width:520px){#mym-root .mym-panel{padding:40px 32px}}
+@media (min-width:900px){#mym-root .mym-panel{grid-template-columns:minmax(0,1fr) minmax(0,440px);grid-template-areas:"intro form" "catalogo form" "extra form";grid-template-rows:auto auto 1fr;column-gap:64px;row-gap:40px;padding:64px 56px;align-items:start}}
+
+#mym-root .mym-titulo{font-family:'Zalando Sans Expanded','Zalando Sans',Arial,sans-serif;font-size:clamp(32px,4.6vw,54px);line-height:1.04;font-weight:800;letter-spacing:-.015em;max-width:11em;color:var(--mym-tinta);text-wrap:balance}
+#mym-root .mym-bajada{margin-top:16px;font-size:clamp(16px,1.6vw,19px);line-height:1.5;color:var(--mym-gris);max-width:30em}
+
+#mym-root .mym-pasos-titulo{font-size:16px;font-weight:700;margin-bottom:6px}
+#mym-root .mym-pasos ol{counter-reset:mym-paso}
+#mym-root .mym-paso{display:grid;grid-template-columns:32px minmax(0,1fr);column-gap:14px;align-items:start;padding:10px 0}
+#mym-root .mym-paso::before{counter-increment:mym-paso;content:counter(mym-paso);display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--mym-principal);color:var(--mym-principal);font-weight:700;font-size:14px;line-height:1}
+#mym-root .mym-paso strong{display:block;font-weight:700;font-size:16px;line-height:1.35;padding-top:5px}
+#mym-root .mym-paso span{display:block;color:var(--mym-gris);font-size:15px}
+
+#mym-root .mym-chat{margin-top:28px;max-width:360px}
+#mym-root .mym-chat-etiqueta{font-size:15px;color:var(--mym-gris);margin-bottom:10px}
+#mym-root .mym-burbuja{position:relative;display:block;background:#FFFFFF;border-radius:4px 16px 16px 16px;padding:10px 14px 8px;margin-left:8px;box-shadow:0 1px 0 rgba(28,33,29,.08);font-size:15px;line-height:1.45}
+#mym-root .mym-burbuja::before{content:"";position:absolute;left:-8px;top:0;width:0;height:0;border-top:12px solid #FFFFFF;border-left:9px solid transparent}
+#mym-root .mym-remitente{display:block;font-size:13px;font-weight:700;color:#1A7F45;margin-bottom:2px}
+#mym-root .mym-burbuja-texto{display:block}
+#mym-root .mym-hora{display:block;text-align:right;font-size:11px;color:#8A918B;margin-top:2px}
+
+#mym-root .mym-card{background:#FFFFFF;border:1px solid var(--mym-borde);border-radius:16px;padding:24px 18px}
+@media (min-width:520px){#mym-root .mym-card{padding:32px 28px}}
+
+#mym-root .mym-campo{margin-bottom:18px}
+#mym-root .mym-label{display:block;font-size:15px;font-weight:700;margin-bottom:7px;color:var(--mym-tinta)}
+#mym-root .mym-input,#mym-root .mym-select{display:block;width:100%;height:50px;padding:0 14px;font-size:16px;line-height:normal;color:var(--mym-tinta);background-color:#FFFFFF;border:1px solid var(--mym-borde);border-radius:10px;outline:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+#mym-root .mym-input::placeholder{color:#9AA19B;opacity:1}
+#mym-root .mym-input:focus,#mym-root .mym-select:focus{border-color:var(--mym-principal);outline:2px solid var(--mym-principal);outline-offset:1px}
+#mym-root .mym-select{padding-right:40px;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%235E5E5E' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px}
+#mym-root .mym-select:invalid{color:#9AA19B}
+#mym-root .mym-select option{color:var(--mym-tinta)}
+#mym-root .mym-tel{display:flex;align-items:stretch}
+#mym-root .mym-prefijo{display:flex;align-items:center;padding:0 12px;border:1px solid var(--mym-borde);border-right:0;border-radius:10px 0 0 10px;background:var(--mym-fondo);color:var(--mym-gris);font-size:16px;white-space:nowrap}
+#mym-root .mym-tel .mym-input{flex:1 1 auto;min-width:0;border-radius:0 10px 10px 0}
+#mym-root .mym-ayuda{display:block;margin-top:6px;font-size:13px;color:var(--mym-gris)}
+#mym-root .mym-opciones{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#mym-root .mym-opcion{position:relative;display:block;cursor:pointer}
+#mym-root .mym-opcion input{position:absolute;opacity:0;width:1px;height:1px;margin:0;pointer-events:none}
+#mym-root .mym-opcion span{display:flex;align-items:center;justify-content:center;height:50px;border:1px solid var(--mym-borde);border-radius:10px;background:#FFFFFF;font-size:16px;font-weight:700;color:var(--mym-tinta)}
+#mym-root .mym-opcion:hover span{border-color:var(--mym-principal)}
+#mym-root .mym-opcion input:checked + span{background:var(--mym-principal);border-color:var(--mym-principal);color:var(--mym-texto-boton)}
+#mym-root .mym-opcion input:focus-visible + span{outline:2px solid var(--mym-principal);outline-offset:2px}
+#mym-root .mym-fila{display:grid;grid-template-columns:minmax(0,1fr);column-gap:14px}
+@media (min-width:520px){#mym-root .mym-fila{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+
+#mym-root .mym-error{display:none;margin-top:6px;font-size:13px;line-height:1.4;color:var(--mym-error)}
+#mym-root .mym-campo--error .mym-error{display:block}
+#mym-root .mym-campo--error .mym-ayuda{display:none}
+#mym-root .mym-campo--error .mym-input,#mym-root .mym-campo--error .mym-select,#mym-root .mym-campo--error .mym-prefijo,#mym-root .mym-campo--error .mym-opcion span{border-color:var(--mym-error)}
+#mym-root .mym-campo--error .mym-input:focus,#mym-root .mym-campo--error .mym-select:focus{outline-color:var(--mym-error)}
+#mym-root .mym-nowrap{white-space:nowrap}
+
+#mym-root .mym-boton{display:flex;align-items:center;justify-content:center;width:100%;min-height:54px;height:auto;margin-top:6px;padding:14px 22px;border:0;border-radius:999px;background:var(--mym-principal);color:var(--mym-texto-boton);font-size:16px;font-weight:700;line-height:1.25;text-align:center;text-decoration:none;cursor:pointer;-webkit-appearance:none;appearance:none}
+#mym-root .mym-boton:hover{opacity:.92}
+#mym-root .mym-boton:disabled{opacity:.6;cursor:progress}
+#mym-root .mym-boton:focus-visible{outline:2px solid var(--mym-principal);outline-offset:3px}
+#mym-root .mym-flotante{position:-webkit-sticky;position:sticky;bottom:12px;z-index:5;display:flex;justify-content:center;margin-top:28px;pointer-events:none}
+#mym-root .mym-flotante .mym-boton{width:100%;max-width:420px;margin:0;box-shadow:0 6px 20px rgba(0,0,0,.18);pointer-events:auto}
+#mym-root .mym-boton--claro{margin-top:12px;border:1px solid var(--mym-principal);background:#FFFFFF;color:var(--mym-tinta)}
+#mym-root .mym-a-catalogo .mym-ver-catalogo{margin:0;min-height:50px}
+@media (min-width:900px){#mym-root .mym-a-catalogo .mym-ver-catalogo{display:inline-flex;width:auto;min-height:48px;padding:12px 28px}}
+#mym-root .mym-legal{margin-top:14px;font-size:13px;color:var(--mym-gris);text-align:center}
+#mym-root .mym-legal a{color:var(--mym-tinta);font-weight:700;text-decoration:underline}
+#mym-root .mym-error-general{margin-top:14px;padding:12px 14px;border-radius:10px;background:#FBEAE9;color:var(--mym-error);font-size:14px;line-height:1.45}
+#mym-root .mym-error-general a{color:inherit;font-weight:700;text-decoration:underline}
+
+#mym-root .mym-check{display:flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:var(--mym-fondo);margin-bottom:18px}
+#mym-root .mym-check svg{width:28px;height:28px;fill:none;stroke:var(--mym-principal);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:24;stroke-dashoffset:24;animation:mym-trazo .45s .1s ease-out forwards}
+@keyframes mym-trazo{to{stroke-dashoffset:0}}
+/* Zona Catálogo: aparece solo después de mandar el formulario */
+#mym-root .mym-catalogo{background:var(--mym-fondo);border-radius:24px;padding:24px 18px 32px}
+@media (min-width:520px){#mym-root .mym-catalogo{padding:32px 32px 40px}}
+@media (min-width:900px){#mym-root .mym-catalogo{padding:36px 48px 48px}}
+#mym-root .mym-aviso{display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:12px;align-items:start;max-width:620px;background:#FFFFFF;border:1px solid var(--mym-borde);border-radius:14px;padding:14px 16px}
+#mym-root .mym-aviso .mym-check{width:36px;height:36px;margin:0}
+#mym-root .mym-aviso .mym-check svg{width:18px;height:18px}
+#mym-root .mym-aviso p{padding-top:7px;font-size:15px;line-height:1.45;color:var(--mym-gris)}
+#mym-root .mym-aviso strong,#mym-root .mym-vacio strong{font-weight:700;color:var(--mym-tinta)}
+#mym-root .mym-aviso a{color:var(--mym-tinta);font-weight:700;text-decoration:underline}
+#mym-root .mym-catalogo .mym-titulo{margin-top:32px;outline:none}
+#mym-root .mym-vacio{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:200px;margin-top:28px;padding:32px 20px;border:1.5px dashed #BDBDB7;border-radius:16px;text-align:center;font-size:16px;line-height:1.45;color:var(--mym-gris)}
+#mym-root .mym-cargando{margin-top:28px;font-size:16px;color:var(--mym-gris)}
+#mym-root .mym-secciones{display:flex;gap:8px;margin:24px -18px 0;padding:0 18px 4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+#mym-root .mym-secciones::-webkit-scrollbar{display:none}
+@media (min-width:520px){#mym-root .mym-secciones{margin:24px 0 0;padding:0 0 4px;flex-wrap:wrap}}
+#mym-root .mym-seccion{flex:0 0 auto;height:40px;margin:0;padding:0 18px;border:1px solid var(--mym-borde);border-radius:999px;background:#FFFFFF;color:var(--mym-tinta);font:inherit;font-size:15px;font-weight:700;cursor:pointer;-webkit-appearance:none;appearance:none}
+#mym-root .mym-seccion:hover{border-color:var(--mym-principal)}
+#mym-root .mym-seccion[aria-pressed="true"]{background:var(--mym-principal);border-color:var(--mym-principal);color:var(--mym-texto-boton)}
+#mym-root .mym-seccion:focus-visible,#mym-root .mym-producto a:focus-visible{outline:2px solid var(--mym-principal);outline-offset:2px}
+#mym-root .mym-grilla{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 0;padding:0;list-style:none}
+@media (min-width:700px){#mym-root .mym-grilla{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}}
+@media (min-width:1000px){#mym-root .mym-grilla{grid-template-columns:repeat(4,minmax(0,1fr))}}
+#mym-root .mym-producto{margin:0;padding:0}
+#mym-root .mym-tela[hidden]{display:none}
+#mym-root .mym-producto[hidden]{display:none}
+#mym-root .mym-producto{display:flex;flex-direction:column;background:#FFFFFF;border:1px solid var(--mym-borde);border-radius:16px;overflow:hidden}
+#mym-root .mym-producto:hover{border-color:var(--mym-principal)}
+#mym-root .mym-producto a{display:flex;flex-direction:column;flex:1 1 auto;color:var(--mym-tinta);text-decoration:none}
+#mym-root .mym-tela + .mym-tela{margin-top:32px}
+#mym-root .mym-tela-titulo{margin:24px 0 0;font-size:20px;font-weight:700;line-height:1.2;color:var(--mym-tinta)}
+#mym-root .mym-colores{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0 12px 14px;list-style:none}
+#mym-root .mym-color{display:block;width:24px;height:24px;margin:0;padding:0;border:1px solid rgba(0,0,0,.25);border-radius:50%;cursor:pointer;-webkit-appearance:none;appearance:none}
+#mym-root .mym-color[aria-pressed="true"]{box-shadow:0 0 0 2px #FFFFFF,0 0 0 4px var(--mym-principal)}
+#mym-root .mym-color:focus-visible{outline:2px solid var(--mym-principal);outline-offset:3px}
+#mym-root .mym-foto{display:block;aspect-ratio:2/3;background:#E8E8E4}
+#mym-root .mym-foto img{display:block;width:100%;height:100%;object-fit:cover}
+#mym-root .mym-producto-texto{display:block;padding:12px 12px 14px}
+#mym-root .mym-producto-nombre{display:block;font-size:15px;font-weight:700;line-height:1.3}
+#mym-root .mym-producto-talles{display:block;margin-top:4px;font-size:14px;line-height:1.35;color:var(--mym-gris)}
+#mym-root .mym-catalogo-pie{display:flex;justify-content:center;margin-top:24px}
+#mym-root .mym-catalogo .mym-ver-tienda{width:auto;margin:0}
+#mym-root .mym-vacio .mym-ver-tienda{margin-top:14px}
+#mym-root .mym-trampa{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+#mym-root .mym-oculto{display:none!important}
+@media (prefers-reduced-motion:reduce){#mym-root .mym-check svg{animation:none;stroke-dashoffset:0}}
+/* Inicio: cómo querés comprar */
+#mym-root .mym-inicio{background:var(--mym-fondo);border-radius:24px;padding:32px 18px 36px}
+@media (min-width:520px){#mym-root .mym-inicio{padding:44px 32px 48px}}
+#mym-root .mym-caminos{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:28px}
+#mym-root .mym-camino{display:grid;grid-template-columns:minmax(0,1fr) 40px;align-items:center;column-gap:16px;width:100%;margin:0;padding:20px 18px 20px 22px;background:#FFFFFF;border:1px solid var(--mym-borde);border-radius:16px;color:var(--mym-tinta);font:inherit;text-align:left;text-decoration:none;cursor:pointer;-webkit-appearance:none;appearance:none}
+#mym-root .mym-camino:hover{border-color:var(--mym-principal)}
+#mym-root .mym-camino:focus-visible{outline:2px solid var(--mym-principal);outline-offset:3px}
+#mym-root .mym-camino-titulo{display:block;font-family:'Zalando Sans Expanded','Zalando Sans',Arial,sans-serif;font-size:22px;font-weight:800;line-height:1.15;letter-spacing:-.01em}
+#mym-root .mym-camino-texto{display:block;margin-top:6px;font-size:15px;line-height:1.45;color:var(--mym-gris)}
+#mym-root .mym-camino-icono{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--mym-principal)}
+#mym-root .mym-camino-icono svg{width:18px;height:18px;fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* Locales físicos */
+#mym-root .mym-locales{background:var(--mym-fondo);border-radius:24px;padding:28px 18px 32px}
+@media (min-width:520px){#mym-root .mym-locales{padding:36px 32px 40px}}
+#mym-root .mym-buscador{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;max-width:620px;margin-top:24px}
+#mym-root .mym-buscador .mym-input{height:50px}
+#mym-root .mym-buscador .mym-boton{width:auto;min-height:50px;margin:0;padding:0 22px}
+#mym-root .mym-ubicacion{display:inline-flex;align-items:center;gap:8px;margin:14px 0 0;padding:0;border:0;background:none;color:var(--mym-tinta);font:inherit;font-size:15px;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+#mym-root .mym-ubicacion svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#mym-root .mym-ubicacion:focus-visible{outline:2px solid var(--mym-principal);outline-offset:3px}
+#mym-root .mym-estado-busqueda{margin-top:22px;min-height:1.55em;font-size:15px;color:var(--mym-gris)}
+#mym-root .mym-resultados{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;margin-top:12px}
+#mym-root .mym-mapa{height:260px;border:1px solid var(--mym-borde);border-radius:16px;overflow:hidden;background:#E8E8E4;z-index:0}
+#mym-root .mym-lista{display:grid;gap:10px;align-content:start}
+#mym-root .mym-local{background:#FFFFFF;border:1px solid var(--mym-borde);border-radius:14px;padding:16px 18px}
+#mym-root .mym-local-nombre{display:block;font-size:16px;font-weight:700}
+#mym-root .mym-local-dir{display:block;margin-top:2px;font-size:15px;color:var(--mym-gris)}
+#mym-root .mym-local-pie{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;font-size:14px}
+#mym-root .mym-local-pie span{color:var(--mym-gris)}
+#mym-root .mym-local-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:4px 16px}
+#mym-root .mym-local-pie a,#mym-root .mym-vacio a{color:var(--mym-tinta);font-weight:700;text-underline-offset:3px}
+#mym-root .mym-vacio a{margin-top:10px}
+#mym-root .mym-solo-lector{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}
+
+@media (min-width:900px){
+#mym-root .mym-inicio{padding:56px 48px 60px}
+#mym-root .mym-caminos{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:36px}
+#mym-root .mym-caminos--dos{grid-template-columns:repeat(2,minmax(0,1fr))}
+#mym-root .mym-camino{grid-template-columns:minmax(0,1fr);grid-template-rows:1fr auto;row-gap:32px;align-items:start;min-height:220px;padding:26px 26px 24px}
+#mym-root .mym-camino-icono{justify-self:end;width:44px;height:44px}
+#mym-root .mym-locales{padding:40px 48px 48px}
+#mym-root .mym-resultados{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:start;gap:18px}
+#mym-root .mym-mapa{order:2;height:440px;position:sticky;top:20px}
+}
+
+/* Compu: más compacto para que el formulario entre entero en la pantalla */
+@media (min-width:900px){
+.tope{padding:14px 40px}
+.contenido{padding:20px 32px 48px}
+#mym-root .mym-panel{grid-template-columns:minmax(0,1fr) minmax(0,420px);column-gap:56px;row-gap:24px;padding:36px 48px}
+#mym-root .mym-titulo{font-size:clamp(30px,3.3vw,46px);max-width:13em}
+#mym-root .mym-bajada{margin-top:12px;font-size:17px}
+#mym-root .mym-card{padding:22px 26px}
+#mym-root .mym-campo{margin-bottom:12px}
+#mym-root .mym-label{font-size:14px;margin-bottom:5px}
+#mym-root .mym-input,#mym-root .mym-select{height:44px}
+#mym-root .mym-opcion span{height:44px}
+#mym-root .mym-ayuda{margin-top:4px;font-size:12px}
+#mym-root .mym-boton{min-height:50px;padding:12px 22px}
+#mym-root .mym-legal{margin-top:10px}
+#mym-root .mym-paso{padding:7px 0}
+#mym-root .mym-chat{margin-top:18px}
+}
+</style>
+</head>
+<body>
+<!--
+  PÁGINA DEL FORMULARIO DE MAYORISTAS – El Mensual
+  Los textos se cambian en CONFIGURACIÓN, dentro del script de abajo.
+  Después de cambiar algo: Implementar > Administrar las implementaciones > lápiz >
+  Versión: "Nueva versión" > Implementar.
+-->
+<header class="tope">
+  <button class="volver" type="button" hidden>← Volver</button>
+  <button class="marca" type="button">El Mensual</button>
+  <span></span>
+</header>
+<main class="contenido">
+  <section id="mym-root" aria-label="El Mensual"></section>
+</main>
+<footer class="pie">El Mensual</footer>
+<script>
+// Puente: la página habla con la app de Google (planilla, panel y avisos) sin estar adentro de Google.
+(function () {
+  var EXEC = 'https://script.google.com/macros/s/AKfycbzmd89k6RkUinWMShAd4BGF99QUZTVot1sAG0FQC4-ykZtXPfnltlNxQnxSk-AxfmM1dQ/exec';
+  var guardado = null;
+  try { guardado = localStorage.getItem('mym_locales'); } catch (e) {}
+  window.MYM_LOCALES = guardado || 'no';
+
+  function pedir(params, ok, mal, cuerpo) {
+    var url = EXEC + '?' + Object.keys(params).map(function (k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+    var opciones = cuerpo ? { method: 'POST', body: new URLSearchParams(cuerpo) } : {};
+    fetch(cuerpo ? EXEC : url, opciones)
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) { if (ok) ok(d); })
+      .catch(function (e) { if (mal) mal(e); });
+  }
+
+  function corredor() {
+    var ok = null, mal = null;
+    var r = {
+      withSuccessHandler: function (f) { ok = f; return r; },
+      withFailureHandler: function (f) { mal = f; return r; },
+      recibirFormulario: function (d) { pedir({}, ok, mal, d || {}); },
+      catalogoMayorista: function () { pedir({ api: 'catalogo' }, ok, mal); },
+      localesPublicos: function () { pedir({ api: 'locales' }, function (d) { if (ok) ok((d && d.locales) || []); }, mal); },
+      buscarZona: function (q) { pedir({ api: 'zona', q: q }, ok, mal); }
+    };
+    return r;
+  }
+
+  function parametros() {
+    var p = {};
+    new URLSearchParams(window.location.search).forEach(function (v, k) { p[k] = v; });
+    return p;
+  }
+
+  var alCambiar = null;
+  window.addEventListener('popstate', function (e) {
+    if (alCambiar) alCambiar({ state: e.state, location: { parameter: parametros() } });
+  });
+
+  window.google = { script: {
+    url: { getLocation: function (cb) { cb({ parameter: parametros() }); } },
+    history: {
+      push: function (estado, params) {
+        var q = Object.keys(params || {}).map(function (k) { return k + '=' + encodeURIComponent(params[k]); }).join('&');
+        history.pushState(estado, '', window.location.pathname + (q ? '?' + q : ''));
+      },
+      setChangeHandler: function (f) { alCambiar = f; }
+    }
+  } };
+  Object.defineProperty(window.google.script, 'run', { get: corredor });
+
+  // "Locales físicos" se prende y apaga desde el panel: se fija y acomoda la página si cambió.
+  pedir({ api: 'config' }, function (d) {
+    if (!d || !d.ok) return;
+    var v = d.mostrarLocales ? 'si' : 'no';
+    try { localStorage.setItem('mym_locales', v); } catch (e) {}
+    if (window.mymConfigurar) window.mymConfigurar({ mostrarLocales: d.mostrarLocales });
+  });
+})();
+</script>
+<script>
+(function () {
+  'use strict';
+
+  /* ====================== CONFIGURACIÓN ====================== */
+  var CONFIG = {
+    marca: 'El Mensual',
+    // Tu WhatsApp: código de área + número, sin 0 ni 15. Ej: '1123456789'. Vacío = no abre WhatsApp.
+    whatsappTienda: '2344542373',
+    titulo: 'Vendé {marca} en tu ciudad',
+    bajada: 'Dejanos tus datos y escribinos por WhatsApp: te pasamos las condiciones para comprar por mayor.',
+    // Texto de la burbuja de ejemplo. Usá {nombre} y {marca}.
+    mensajeWhatsApp: 'Hola {nombre}! Te escribo de {marca} por tu consulta de venta mayorista.',
+    textoBoton: 'Quiero comprar por mayor',
+    // Zona Catálogo: solo para mayoristas. No tiene link en la tienda y aparece
+    // recién después de mandar el formulario.
+    catalogoTitulo: 'Catálogo mayorista',
+    catalogoBajada: 'Exclusivo para revendedores de {marca}. Los precios por mayor te los pasamos por WhatsApp.',
+    // Los productos salen de tu tienda online (foto, nombre y talles, sin precios).
+    // Si la tienda no responde, se muestra este aviso con el botón para ir a la tienda.
+    tiendaWeb: 'https://www.elmensual.com.ar',
+    catalogoVacio: 'Mirá todos los productos en nuestra tienda online.',
+    catalogoVacioDetalle: 'Los precios por mayor te los pasamos por WhatsApp.',
+    // Pantalla de inicio: Mayorista / Minorista / Locales físicos
+    inicioTitulo: '¿Cómo querés comprar {marca}?',
+    // Minorista: texto y adónde lleva el botón
+    minoristaTexto: 'Comprá online prendas para vos en las tiendas que trabajan la marca.',
+    mercadoLibre: 'https://www.mercadolibre.com.ar/pagina/percepcion',
+    // Locales físicos (salen del panel: los que tengan "En el mapa" prendido y estén ubicados).
+    // Si la apagás desde el panel, la opción no aparece en el inicio.
+    mostrarLocales: (window.MYM_LOCALES || 'si') !== 'no',
+    localesTitulo: 'Locales físicos',
+    localesBajada: 'Encontrá dónde comprar {marca} cerca tuyo.',
+    radioCercaKm: 30
+  };
+  /* =========================================================== */
+
+  var PROVINCIAS = [
+    'Buenos Aires', 'Ciudad Autónoma de Buenos Aires (CABA)', 'Catamarca', 'Chaco',
+    'Chubut', 'Córdoba', 'Corrientes', 'Entre Ríos', 'Formosa', 'Jujuy', 'La Pampa',
+    'La Rioja', 'Mendoza', 'Misiones', 'Neuquén', 'Río Negro', 'Salta', 'San Juan',
+    'San Luis', 'Santa Cruz', 'Santa Fe', 'Santiago del Estero', 'Tierra del Fuego',
+    'Tucumán'
+  ];
+
+  var MENSAJES = {
+    nombre: 'Escribí tu nombre y apellido.',
+    telefono: 'Revisá el número: código de área sin 0 y número sin 15. Ej: 11 2345 6789.',
+    local: 'Elegí Sí o No.',
+    provincia: 'Elegí tu provincia.',
+    ciudad: 'Escribí tu ciudad.'
+  };
+
+  var inicio = 0;
+
+  function esc(texto) {
+    return String(texto == null ? '' : texto)
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function conMarca(texto) {
+    return String(texto).split('{marca}').join(CONFIG.marca);
+  }
+
+  function primerNombre(nombre) {
+    var p = String(nombre || '').replace(/^\s+|\s+$/g, '').split(/\s+/)[0] || '';
+    return p ? p.charAt(0).toUpperCase() + p.slice(1) : '';
+  }
+
+  // Devuelve los 10 dígitos (área + número) o '' si no es un celular argentino válido.
+  function telefonoNacional(texto) {
+    var d = String(texto || '').replace(/\D/g, '');
+    if (d.indexOf('00') === 0) d = d.slice(2);
+    if (d.length > 10 && d.indexOf('54') === 0) d = d.slice(2);
+    if (d.length === 11 && d.indexOf('9') === 0) d = d.slice(1);
+    if (d.length === 11 && d.indexOf('0') === 0) d = d.slice(1);
+    return /^(11\d{8}|[23]\d{9})$/.test(d) ? d : '';
+  }
+
+  // Solo agrupa los números que empiezan con 11; el resto va entero
+  // porque el código de área puede tener 3 o 4 dígitos.
+  function telefonoLindo(nacional) {
+    if (nacional.indexOf('11') === 0) {
+      return '11 ' + nacional.slice(2, 6) + '-' + nacional.slice(6);
+    }
+    return nacional;
+  }
+
+  function textoBurbuja(nombre) {
+    var n = primerNombre(nombre);
+    return conMarca(CONFIG.mensajeWhatsApp).replace(/\s?\{nombre\}/, n ? ' ' + n : '');
+  }
+
+  // Mensaje que te manda la persona al tocar el botón, con sus datos.
+  function linkWhatsAppTienda(datos) {
+    var numero = telefonoNacional(CONFIG.whatsappTienda);
+    if (!numero) return '';
+    var provincia = datos.provincia || '';
+    var lineas = ['Hola! Quiero comprar por mayor.'];
+    if (datos.nombre) lineas.push('Nombre: ' + datos.nombre);
+    if (datos.ciudad) lineas.push('Ciudad: ' + datos.ciudad);
+    if (provincia) lineas.push('Provincia: ' + (provincia.indexOf('CABA') !== -1 ? 'CABA' : provincia));
+    if (datos.local) lineas.push('Local físico: ' + datos.local);
+    return 'https://wa.me/549' + numero + '?text=' + encodeURIComponent(lineas.join('\n'));
+  }
+
+  function campoTexto(id, etiqueta, placeholder, autocompletar) {
+    return '<div class="mym-campo" data-campo="' + id + '">' +
+      '<label class="mym-label" for="mym-' + id + '">' + etiqueta + '</label>' +
+      '<input class="mym-input" id="mym-' + id + '" name="' + id + '" type="text" ' +
+      'autocomplete="' + autocompletar + '" placeholder="' + placeholder + '" ' +
+      'aria-describedby="mym-error-' + id + '">' +
+      '<span class="mym-error" id="mym-error-' + id + '">' + MENSAJES[id] + '</span>' +
+      '</div>';
+  }
+
+  function plantilla() {
+    var provincias = '<option value="" disabled selected>Elegí una</option>';
+    for (var i = 0; i < PROVINCIAS.length; i++) {
+      provincias += '<option value="' + esc(PROVINCIAS[i]) + '">' + esc(PROVINCIAS[i]) + '</option>';
+    }
+
+    return '<div class="mym-panel">' +
+      '<div class="mym-intro">' +
+        '<h2 class="mym-titulo">' + esc(conMarca(CONFIG.titulo)) + '</h2>' +
+        '<p class="mym-bajada">' + esc(conMarca(CONFIG.bajada)) + '</p>' +
+      '</div>' +
+      // En el celu queda abajo del formulario; en la compu, a la izquierda, fuera del cuadro.
+      '<div class="mym-a-catalogo"><button type="button" class="mym-boton mym-boton--claro mym-ver-catalogo">Ver catálogo</button></div>' +
+
+      '<div class="mym-card">' +
+        '<form class="mym-form" novalidate>' +
+          campoTexto('nombre', 'Nombre y apellido', 'Ej: Laura Gómez', 'name') +
+
+          '<div class="mym-campo" data-campo="telefono">' +
+            '<label class="mym-label" for="mym-telefono">WhatsApp</label>' +
+            '<div class="mym-tel"><span class="mym-prefijo" aria-hidden="true">+54 9</span>' +
+            '<input class="mym-input" id="mym-telefono" name="telefono" type="tel" inputmode="tel" ' +
+            'autocomplete="tel-national" placeholder="11 2345 6789" ' +
+            'aria-describedby="mym-ayuda-telefono mym-error-telefono"></div>' +
+            '<span class="mym-ayuda" id="mym-ayuda-telefono">Código de área sin el 0 y número sin el 15.</span>' +
+            '<span class="mym-error" id="mym-error-telefono">' + MENSAJES.telefono + '</span>' +
+          '</div>' +
+
+          '<div class="mym-campo" data-campo="local" role="radiogroup" aria-labelledby="mym-label-local" ' +
+          'aria-describedby="mym-error-local">' +
+            '<span class="mym-label" id="mym-label-local">¿Tenés local físico?</span>' +
+            '<div class="mym-opciones">' +
+              '<label class="mym-opcion"><input type="radio" name="local" value="Sí"><span>Sí</span></label>' +
+              '<label class="mym-opcion"><input type="radio" name="local" value="No"><span>No</span></label>' +
+            '</div>' +
+            '<span class="mym-error" id="mym-error-local">' + MENSAJES.local + '</span>' +
+          '</div>' +
+
+          '<div class="mym-fila">' +
+            '<div class="mym-campo" data-campo="provincia">' +
+              '<label class="mym-label" for="mym-provincia">Provincia</label>' +
+              '<select class="mym-select" id="mym-provincia" name="provincia" required ' +
+              'autocomplete="address-level1" aria-describedby="mym-error-provincia">' + provincias + '</select>' +
+              '<span class="mym-error" id="mym-error-provincia">' + MENSAJES.provincia + '</span>' +
+            '</div>' +
+            campoTexto('ciudad', 'Ciudad', 'Ej: Pergamino', 'address-level2') +
+          '</div>' +
+
+          '<div class="mym-trampa" aria-hidden="true">' +
+            '<label>Web<input type="text" name="web" tabindex="-1" autocomplete="off"></label>' +
+          '</div>' +
+
+          '<button type="submit" class="mym-boton">' + esc(CONFIG.textoBoton) + '</button>' +
+          '<div class="mym-error-general mym-oculto" role="alert"></div>' +
+          '<p class="mym-legal">Se abre WhatsApp con tus datos listos para enviar. Solo los usamos para contactarte.</p>' +
+        '</form>' +
+      '</div>' +
+
+      '<div class="mym-extra">' +
+        '<div class="mym-pasos">' +
+          '<p class="mym-pasos-titulo">Cómo sigue</p>' +
+          '<ol>' +
+            '<li class="mym-paso"><div><strong>Completás tus datos</strong><span>Te lleva menos de un minuto.</span></div></li>' +
+            '<li class="mym-paso"><div><strong>Nos mandás el WhatsApp</strong><span>Se abre solo, con tu mensaje listo.</span></div></li>' +
+            '<li class="mym-paso"><div><strong>Armás tu pedido</strong><span>Con precios mayoristas.</span></div></li>' +
+          '</ol>' +
+        '</div>' +
+        '<div class="mym-chat">' +
+          '<p class="mym-chat-etiqueta">Así te vamos a escribir:</p>' +
+          '<div class="mym-burbuja">' +
+            '<span class="mym-remitente">' + esc(CONFIG.marca) + '</span>' +
+            '<span class="mym-burbuja-texto" aria-live="polite">' + esc(textoBurbuja('')) + '</span>' +
+            '<span class="mym-hora">ahora</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  /* ---------- Pantallas: inicio, mayorista y locales físicos ---------- */
+  var ICONO_SEGUIR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+  var ICONO_AFUERA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+  var ICONO_UBICACION = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>';
+
+  function iniciar() {
+    var root = document.getElementById('mym-root');
+    if (!root || root.getAttribute('data-listo')) return;
+    root.setAttribute('data-listo', '1');
+
+    var volver = document.querySelector('.tope .volver');
+    var marca = document.querySelector('.tope .marca');
+    if (volver) volver.addEventListener('click', function () { irA(vistaActual === 'catalogo' ? 'mayorista' : 'inicio'); });
+    if (marca) marca.addEventListener('click', function () { irA('inicio'); });
+
+    var historial = scriptApi('history');
+    if (historial) {
+      historial.setChangeHandler(function (e) {
+        var v = (e && e.state && e.state.vista) ||
+          (e && e.location && e.location.parameter && e.location.parameter.vista);
+        irA(v || 'inicio', true);
+      });
+    }
+    var url = scriptApi('url');
+    if (url) {
+      url.getLocation(function (loc) { irA((loc && loc.parameter && loc.parameter.vista) || 'inicio', true); });
+    } else {
+      var m = /[?&]vista=([a-z]+)/.exec(window.location.search);
+      irA(m ? m[1] : 'inicio', true);
+    }
+  }
+
+  // Página propia (fuera de Google): avisa si cambió "Locales físicos" desde el panel.
+  window.mymConfigurar = function (o) {
+    if (!o || typeof o.mostrarLocales !== 'boolean' || o.mostrarLocales === CONFIG.mostrarLocales) return;
+    CONFIG.mostrarLocales = o.mostrarLocales;
+    if (vistaActual === 'inicio' || vistaActual === 'locales') irA(vistaActual, true);
+  };
+
+  function scriptApi(nombre) {
+    try {
+      return window.google && google.script && google.script[nombre] ? google.script[nombre] : null;
+    } catch (err) {
+      return null;
+    }
+  }
+
+  // Cambia de pantalla. Se puede entrar directo con ?vista=mayorista, ?vista=catalogo o ?vista=locales.
+  var vistaActual = 'inicio';
+  function irA(vista, sinHistorial) {
+    var root = document.getElementById('mym-root');
+    if (vista !== 'mayorista' && vista !== 'locales' && vista !== 'catalogo') vista = 'inicio';
+    if (vista === 'locales' && !CONFIG.mostrarLocales) vista = 'inicio';
+    vistaActual = vista;
+    if (vista === 'mayorista') {
+      root.innerHTML = plantilla();
+      inicio = new Date().getTime();
+      conectar(root);
+      root.querySelector('.mym-ver-catalogo').addEventListener('click', function () { irA('catalogo'); });
+    } else if (vista === 'catalogo') {
+      mostrarCatalogo(root, null);
+    } else if (vista === 'locales') {
+      mostrarLocales(root);
+    } else {
+      root.innerHTML = plantillaInicio();
+      root.querySelector('[data-ir="mayorista"]').addEventListener('click', function () { irA('mayorista'); });
+      var aLocales = root.querySelector('[data-ir="locales"]');
+      if (aLocales) aLocales.addEventListener('click', function () { irA('locales'); });
+    }
+    var volver = document.querySelector('.tope .volver');
+    if (volver) volver.hidden = vista === 'inicio';
+    window.scrollTo(0, 0);
+    var historial = scriptApi('history');
+    if (!sinHistorial && historial) {
+      try { historial.push({ vista: vista }, vista === 'inicio' ? {} : { vista: vista }); } catch (err) { /* sin historial */ }
+    }
+  }
+
+  function plantillaInicio() {
+    return '<div class="mym-inicio">' +
+      '<h2 class="mym-titulo">' + esc(conMarca(CONFIG.inicioTitulo)) + '</h2>' +
+      '<div class="mym-caminos' + (CONFIG.mostrarLocales ? '' : ' mym-caminos--dos') + '">' +
+        '<button type="button" class="mym-camino" data-ir="mayorista">' +
+          '<span><span class="mym-camino-titulo">Mayorista</span>' +
+          '<span class="mym-camino-texto">Comprá por mayor para revender en tu local o en tu ciudad.</span></span>' +
+          '<span class="mym-camino-icono">' + ICONO_SEGUIR + '</span></button>' +
+        '<a class="mym-camino" href="' + esc(CONFIG.mercadoLibre) + '" target="_top">' +
+          '<span><span class="mym-camino-titulo">Minorista</span>' +
+          '<span class="mym-camino-texto">' + esc(conMarca(CONFIG.minoristaTexto)) + '</span></span>' +
+          '<span class="mym-camino-icono">' + ICONO_AFUERA + '</span></a>' +
+        (CONFIG.mostrarLocales ? '<button type="button" class="mym-camino" data-ir="locales">' +
+          '<span><span class="mym-camino-titulo">Locales físicos</span>' +
+          '<span class="mym-camino-texto">Encontrá un local que venda ' + esc(CONFIG.marca) + ' cerca tuyo.</span></span>' +
+          '<span class="mym-camino-icono">' + ICONO_SEGUIR + '</span></button>' : '') +
+      '</div>' +
+    '</div>';
+  }
+
+  /* ---------- Locales físicos ---------- */
+  var locales = null;
+  var mapa = null;
+  var capaMapa = null;
+  var LEAFLET = 'https://unpkg.com/leaflet@1.9.4/dist/';
+
+  function mostrarLocales(root) {
+    root.innerHTML = '<div class="mym-locales">' +
+      '<h2 class="mym-titulo">' + esc(conMarca(CONFIG.localesTitulo)) + '</h2>' +
+      '<p class="mym-bajada">' + esc(conMarca(CONFIG.localesBajada)) + '</p>' +
+      '<form class="mym-buscador" role="search" novalidate>' +
+        '<label class="mym-solo-lector" for="mym-zona">Tu ciudad o provincia</label>' +
+        '<input class="mym-input" id="mym-zona" name="zona" type="search" placeholder="Tu ciudad o provincia" ' +
+        'autocomplete="address-level2" enterkeyhint="search">' +
+        '<button type="submit" class="mym-boton">Buscar</button>' +
+      '</form>' +
+      '<button type="button" class="mym-ubicacion">' + ICONO_UBICACION + 'Usar mi ubicación</button>' +
+      '<p class="mym-estado-busqueda" aria-live="polite">Cargando locales…</p>' +
+      '<div class="mym-resultados"><div class="mym-mapa mym-oculto"></div><div class="mym-lista"></div></div>' +
+    '</div>';
+
+    var form = root.querySelector('.mym-buscador');
+    var input = form.elements.zona;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var texto = input.value.replace(/^\s+|\s+$/g, '');
+      if (texto.length < 2) { input.focus(); return; }
+      input.blur();
+      estadoLocales(root, 'Buscando ' + texto + '…');
+      conLocales(function () {
+        var run = scriptApi('run');
+        if (!run) { pintarPorTexto(root, texto); return; }
+        run.withSuccessHandler(function (r) {
+          if (r && r.ok) pintarLocales(root, { lat: r.lat, lng: r.lng }, r.nombre);
+          else pintarPorTexto(root, texto);
+        }).withFailureHandler(function () {
+          pintarPorTexto(root, texto);
+        }).buscarZona(texto);
+      });
+    });
+
+    root.querySelector('.mym-ubicacion').addEventListener('click', function () {
+      if (!navigator.geolocation) {
+        estadoLocales(root, 'Tu navegador no deja usar la ubicación. Escribí tu ciudad o provincia.');
+        return;
+      }
+      estadoLocales(root, 'Buscando tu ubicación…');
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        conLocales(function () {
+          pintarLocales(root, { lat: pos.coords.latitude, lng: pos.coords.longitude }, '');
+        });
+      }, function () {
+        estadoLocales(root, 'No pudimos usar tu ubicación. Escribí tu ciudad o provincia.');
+      }, { timeout: 10000, maximumAge: 600000 });
+    });
+
+    conLocales(function () { pintarLocales(root, null, ''); });
+  }
+
+  // Pide la lista de locales una vez; si falla, la vuelve a pedir en la próxima búsqueda.
+  function conLocales(listo) {
+    if (locales) { listo(); return; }
+    var run = scriptApi('run');
+    if (!run) { locales = []; listo(); return; }
+    run.withSuccessHandler(function (lista) {
+      locales = lista || [];
+      listo();
+    }).withFailureHandler(function () {
+      locales = null;
+      listo();
+    }).localesPublicos();
+  }
+
+  function estadoLocales(root, texto) {
+    var p = root.querySelector('.mym-estado-busqueda');
+    if (p) p.textContent = texto;
+  }
+
+  function pintarLocales(root, punto, nombreZona) {
+    if (!root.querySelector('.mym-locales')) return;
+    var lista = locales || [];
+    if (!lista.length) {
+      estadoLocales(root, '');
+      root.querySelector('.mym-lista').innerHTML =
+        '<div class="mym-vacio"><strong>Todavía no hay locales cargados.</strong>' +
+        '<span>Mientras tanto, podés comprar online.</span>' +
+        '<a href="' + esc(CONFIG.mercadoLibre) + '" target="_top">Ir a Mercado Libre</a></div>';
+      mostrarMapa(root, false);
+      return;
+    }
+    var orden = lista.map(function (l) { return { l: l, km: punto ? distanciaKm(punto, l) : null }; });
+    if (punto) {
+      orden.sort(function (a, b) { return a.km - b.km; });
+    } else {
+      orden.sort(function (a, b) {
+        return (a.l.provincia + a.l.ciudad + a.l.local).localeCompare(b.l.provincia + b.l.ciudad + b.l.local, 'es');
+      });
+    }
+
+    var visibles = orden;
+    if (punto) {
+      var donde = nombreZona ? 'cerca de ' + nombreZona : 'cerca tuyo';
+      var cerca = orden.filter(function (x) { return x.km <= CONFIG.radioCercaKm; });
+      if (cerca.length) {
+        visibles = cerca;
+        estadoLocales(root, (cerca.length === 1 ? 'Hay 1 local ' : 'Hay ' + cerca.length + ' locales ') + donde + '.');
+      } else {
+        visibles = orden.slice(0, 3);
+        estadoLocales(root, 'Todavía no hay locales ' + donde + '. El más cercano está a ' + textoKm(orden[0].km) + '.');
+      }
+    } else {
+      estadoLocales(root, lista.length === 1 ? 'Hay 1 local.' : 'Hay ' + lista.length + ' locales.');
+    }
+    mostrarLista(root, visibles, punto, nombreZona);
+  }
+
+  // Si no se pudo ubicar la zona, busca el texto en la lista (ciudad, provincia, dirección).
+  function pintarPorTexto(root, texto) {
+    if (!root.querySelector('.mym-locales')) return;
+    var buscado = normalizar(texto);
+    var coinciden = (locales || []).filter(function (l) {
+      return normalizar([l.local, l.direccion, l.ciudad, l.provincia].join(' ')).indexOf(buscado) !== -1;
+    });
+    if (!coinciden.length) {
+      pintarLocales(root, null, '');
+      estadoLocales(root, 'No encontramos "' + texto + '". Probá con tu ciudad y provincia, o usá tu ubicación.');
+      return;
+    }
+    estadoLocales(root, (coinciden.length === 1 ? 'Hay 1 local' : 'Hay ' + coinciden.length + ' locales') + ' en ' + texto + '.');
+    mostrarLista(root, coinciden.map(function (l) { return { l: l, km: null }; }), null, '');
+  }
+
+  function mostrarLista(root, visibles, punto, nombreZona) {
+    root.querySelector('.mym-lista').innerHTML = visibles.map(tarjetaLocal).join('');
+    pintarMapa(root, visibles, punto, nombreZona);
+  }
+
+  function tarjetaLocal(x) {
+    var l = x.l;
+    var zona = [l.ciudad, provinciaCorta(l.provincia)].filter(function (s) { return s; }).join(', ');
+    return '<article class="mym-local">' +
+      '<span class="mym-local-nombre">' + esc(l.local) + '</span>' +
+      '<span class="mym-local-dir">' + esc([l.direccion, zona].filter(function (s) { return s; }).join(', ')) + '</span>' +
+      '<div class="mym-local-pie"><span>' + (x.km !== null ? 'A ' + textoKm(x.km) : '') + '</span>' +
+      '<div class="mym-local-links">' + verEnMaps(l) +
+      '<a href="' + esc(comoLlegar(l)) + '" target="_blank" rel="noopener">Cómo llegar</a></div></div>' +
+    '</article>';
+  }
+
+  function comoLlegar(l) {
+    return 'https://www.google.com/maps/dir/?api=1&destination=' + Number(l.lat) + ',' + Number(l.lng);
+  }
+
+  // La ficha del local en Google Maps (fotos, horarios), si se cargó su link en el panel.
+  function verEnMaps(l) {
+    var u = String(l.maps || '');
+    if (!/^https:\/\/(maps\.app\.goo\.gl\/|goo\.gl\/maps\/|(www\.)?google\.[a-z]{2,3}(\.[a-z]{2})?\/maps[\/?]|maps\.google\.[a-z]{2,3}(\.[a-z]{2})?[\/?])/i.test(u)) return '';
+    return '<a href="' + esc(u) + '" target="_blank" rel="noopener">Ver en Maps</a>';
+  }
+
+  function provinciaCorta(p) {
+    return String(p || '').indexOf('CABA') !== -1 ? 'CABA' : String(p || '');
+  }
+
+  function normalizar(t) {
+    var s = String(t || '').toLowerCase();
+    return s.normalize ? s.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : s;
+  }
+
+  function distanciaKm(a, b) {
+    var rad = Math.PI / 180;
+    var dLat = (b.lat - a.lat) * rad;
+    var dLng = (b.lng - a.lng) * rad;
+    var h = Math.pow(Math.sin(dLat / 2), 2) +
+      Math.cos(a.lat * rad) * Math.cos(b.lat * rad) * Math.pow(Math.sin(dLng / 2), 2);
+    return 12742 * Math.asin(Math.min(1, Math.sqrt(h)));
+  }
+
+  function textoKm(km) {
+    if (km < 1) return Math.max(50, Math.round(km * 20) * 50) + ' m';
+    return (km < 10 ? km.toFixed(1).replace('.', ',') : String(Math.round(km))) + ' km';
+  }
+
+  function mostrarMapa(root, ver) {
+    var el = root.querySelector('.mym-mapa');
+    if (el) el.className = 'mym-mapa' + (ver ? '' : ' mym-oculto');
+  }
+
+  function pintarMapa(root, visibles, punto, nombreZona) {
+    var el = root.querySelector('.mym-mapa');
+    if (!el) return;
+    mostrarMapa(root, true);
+    cargarLeaflet(function (ok) {
+      if (!ok) { mostrarMapa(root, false); return; }
+      if (!document.body.contains(el)) return;
+      if (!mapa || mapa.getContainer() !== el) {
+        if (mapa) { try { mapa.remove(); } catch (err) { /* ya no está */ } }
+        mapa = L.map(el, { scrollWheelZoom: false });
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19, attribution: '&copy; OpenStreetMap'
+        }).addTo(mapa);
+        capaMapa = L.layerGroup().addTo(mapa);
+      }
+      capaMapa.clearLayers();
+      var puntos = [];
+      visibles.forEach(function (x) {
+        var ll = [Number(x.l.lat), Number(x.l.lng)];
+        puntos.push(ll);
+        L.circleMarker(ll, { radius: 8, color: '#000000', weight: 2, fillColor: '#000000', fillOpacity: 1 })
+          .bindPopup('<strong>' + esc(x.l.local) + '</strong><br>' + esc(x.l.direccion) + '<br>' +
+            '<a href="' + esc(comoLlegar(x.l)) + '" target="_blank" rel="noopener">Cómo llegar</a>' +
+            (verEnMaps(x.l) ? '<br>' + verEnMaps(x.l) : ''))
+          .addTo(capaMapa);
+      });
+      if (punto) {
+        puntos.push([punto.lat, punto.lng]);
+        L.circleMarker([punto.lat, punto.lng], { radius: 7, color: '#000000', weight: 2, fillColor: '#FFFFFF', fillOpacity: 1 })
+          .bindTooltip(nombreZona ? esc(nombreZona) : 'Vos')
+          .addTo(capaMapa);
+      }
+      mapa.invalidateSize();
+      if (puntos.length === 1) mapa.setView(puntos[0], 14);
+      else if (puntos.length > 1) mapa.fitBounds(puntos, { padding: [32, 32], maxZoom: 14 });
+      else mapa.setView([-38.4, -63.6], 4);
+    });
+  }
+
+  // Carga el mapa (Leaflet) solo cuando hace falta. Si no carga, queda la lista.
+  var leafletEstado = 0;
+  var leafletEspera = [];
+  function cargarLeaflet(listo) {
+    if (window.L && window.L.map) { listo(true); return; }
+    if (leafletEstado === 2) { listo(false); return; }
+    leafletEspera.push(listo);
+    if (leafletEstado === 1) return;
+    leafletEstado = 1;
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = LEAFLET + 'leaflet.css';
+    css.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+    css.crossOrigin = '';
+    document.head.appendChild(css);
+    var js = document.createElement('script');
+    js.src = LEAFLET + 'leaflet.js';
+    js.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    js.crossOrigin = '';
+    js.onload = function () { terminar(!!(window.L && window.L.map)); };
+    js.onerror = function () { terminar(false); };
+    document.head.appendChild(js);
+    function terminar(ok) {
+      leafletEstado = ok ? 3 : 2;
+      var cola = leafletEspera;
+      leafletEspera = [];
+      cola.forEach(function (f) { f(ok); });
+    }
+  }
+
+  function conectar(root) {
+    var form = root.querySelector('.mym-form');
+    var burbuja = root.querySelector('.mym-burbuja-texto');
+    var inputNombre = form.elements.nombre;
+
+    inputNombre.addEventListener('input', function () {
+      burbuja.textContent = textoBurbuja(inputNombre.value);
+    });
+
+    // Si elige CABA como provincia, la ciudad se completa sola con "CABA".
+    var selectProvincia = form.elements.provincia;
+    var inputCiudad = form.elements.ciudad;
+    selectProvincia.addEventListener('change', function () {
+      var esCaba = selectProvincia.value.indexOf('CABA') !== -1;
+      if (esCaba && (!inputCiudad.value || inputCiudad.getAttribute('data-auto'))) {
+        inputCiudad.value = 'CABA';
+        inputCiudad.setAttribute('data-auto', '1');
+      } else if (!esCaba && inputCiudad.getAttribute('data-auto')) {
+        inputCiudad.value = '';
+        inputCiudad.removeAttribute('data-auto');
+      }
+      revalidar(form, 'ciudad');
+    });
+    inputCiudad.addEventListener('input', function () { inputCiudad.removeAttribute('data-auto'); });
+
+    form.addEventListener('input', function (e) { revalidar(form, e.target.name); });
+    form.addEventListener('change', function (e) { revalidar(form, e.target.name); });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var datos = leer(form);
+      var errores = validar(datos);
+      marcarErrores(form, errores);
+      if (errores.length) {
+        enfocar(form, errores[0]);
+        return;
+      }
+      enviar(root, form, datos);
+      abrirWhatsApp(linkWhatsAppTienda(datos));
+    });
+  }
+
+  function leer(form) {
+    var local = form.querySelector('input[name="local"]:checked');
+    return {
+      nombre: form.elements.nombre.value.replace(/\s+/g, ' ').replace(/^\s|\s$/g, ''),
+      telefono: form.elements.telefono.value,
+      local: local ? local.value : '',
+      provincia: form.elements.provincia.value,
+      ciudad: form.elements.ciudad.value.replace(/\s+/g, ' ').replace(/^\s|\s$/g, ''),
+      web: form.elements.web.value
+    };
+  }
+
+  function validar(d) {
+    var errores = [];
+    if (d.nombre.length < 2) errores.push('nombre');
+    if (!telefonoNacional(d.telefono)) errores.push('telefono');
+    if (!d.local) errores.push('local');
+    if (!d.provincia) errores.push('provincia');
+    if (d.ciudad.length < 2) errores.push('ciudad');
+    return errores;
+  }
+
+  function marcarErrores(form, errores) {
+    var campos = form.querySelectorAll('.mym-campo');
+    for (var i = 0; i < campos.length; i++) {
+      var nombre = campos[i].getAttribute('data-campo');
+      var conError = errores.indexOf(nombre) !== -1;
+      campos[i].className = 'mym-campo' + (conError ? ' mym-campo--error' : '');
+      var controles = campos[i].querySelectorAll('input, select');
+      for (var j = 0; j < controles.length; j++) {
+        if (conError) controles[j].setAttribute('aria-invalid', 'true');
+        else controles[j].removeAttribute('aria-invalid');
+      }
+    }
+  }
+
+  // Cuando corrigen un campo marcado en rojo, se saca el error en el momento.
+  function revalidar(form, nombre) {
+    var campo = form.querySelector('.mym-campo--error[data-campo="' + nombre + '"]');
+    if (!campo) return;
+    if (validar(leer(form)).indexOf(nombre) === -1) {
+      campo.className = 'mym-campo';
+      var controles = campo.querySelectorAll('input, select');
+      for (var i = 0; i < controles.length; i++) controles[i].removeAttribute('aria-invalid');
+    }
+  }
+
+  function enfocar(form, nombre) {
+    var control = nombre === 'local'
+      ? form.querySelector('input[name="local"]')
+      : form.elements[nombre];
+    if (control && control.focus) control.focus();
+  }
+
+  function enviar(root, form, datos) {
+    var boton = form.querySelector('.mym-boton');
+    var aviso = form.querySelector('.mym-error-general');
+    aviso.className = 'mym-error-general mym-oculto';
+    boton.disabled = true;
+    boton.textContent = 'Enviando…';
+
+    var terminado = false;
+    var reloj = setTimeout(function () {
+      if (terminado) return;
+      terminado = true;
+      reactivar(boton);
+      mostrarError(aviso, datos);
+    }, 25000);
+
+    google.script.run
+      .withSuccessHandler(function (r) {
+        if (terminado) return;
+        terminado = true;
+        clearTimeout(reloj);
+        if (r && r.ok) {
+          mostrarCatalogo(root, datos);
+        } else {
+          reactivar(boton);
+          mostrarError(aviso, datos, r && r.error);
+        }
+      })
+      .withFailureHandler(function () {
+        if (terminado) return;
+        terminado = true;
+        clearTimeout(reloj);
+        reactivar(boton);
+        mostrarError(aviso, datos);
+      })
+      .recibirFormulario({
+        nombre: datos.nombre,
+        telefono: telefonoNacional(datos.telefono),
+        local: datos.local,
+        provincia: datos.provincia,
+        ciudad: datos.ciudad,
+        web: datos.web,
+        t: String(new Date().getTime() - inicio)
+      });
+  }
+
+  // Abre WhatsApp con el mensaje listo. Se llama en el mismo toque del botón
+  // para que el navegador no lo bloquee; los datos se guardan igual en paralelo.
+  function abrirWhatsApp(link) {
+    if (!link) return;
+    try { window.open(link, '_blank'); } catch (err) { /* queda el link "Abrilo acá" en el catálogo */ }
+  }
+
+  function reactivar(boton) {
+    boton.disabled = false;
+    boton.textContent = CONFIG.textoBoton;
+  }
+
+  function mostrarError(aviso, datos, detalle) {
+    var link = linkWhatsAppTienda(datos);
+    aviso.innerHTML = esc(detalle || 'No pudimos guardar tus datos. Revisá tu conexión y probá de nuevo.') +
+      (link ? ' Igual podés mandarnos el mensaje <a href="' + esc(link) + '" target="_blank" rel="noopener">por WhatsApp</a>.' : '');
+    aviso.className = 'mym-error-general';
+  }
+
+  // Después de guardar los datos, la página pasa a la zona Catálogo (con el aviso de WhatsApp arriba).
+  // También se abre con el botón "Ver catálogo" del formulario (sin datos: sin aviso).
+  // Los productos llegan del servidor (que los toma de la tienda online), sin precios:
+  // los precios por mayor nunca quedan en el código de la página.
+  function mostrarCatalogo(root, datos) {
+    var nombre = datos ? primerNombre(datos.nombre) : '';
+    var link = datos ? linkWhatsAppTienda(datos) : '';
+
+    root.innerHTML =
+      '<div class="mym-catalogo">' +
+        (datos ? '<div class="mym-aviso" role="status">' +
+          '<div class="mym-check"><svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
+          '<p><strong>¡Listo' + (nombre ? ', ' + esc(nombre) : '') + '!</strong> Se abrió WhatsApp con tu mensaje: tocá <strong>Enviar</strong> para que nos llegue.' +
+          (link ? ' ¿No se abrió? <a href="' + esc(link) + '" target="_blank" rel="noopener">Abrilo acá</a>.' : '') + '</p>' +
+        '</div>' : '') +
+        '<h2 class="mym-titulo" tabindex="-1">' + esc(conMarca(CONFIG.catalogoTitulo)) + '</h2>' +
+        '<p class="mym-bajada">' + esc(conMarca(CONFIG.catalogoBajada)) + '</p>' +
+        '<div class="mym-productos" aria-busy="true"><p class="mym-cargando">Cargando productos…</p></div>' +
+        // Botón que acompaña mientras se mira el catálogo: al formulario o, si ya lo mandó, a WhatsApp.
+        '<div class="mym-flotante">' + (datos && link
+          ? '<a class="mym-boton" href="' + esc(link) + '" target="_blank" rel="noopener">Hacer mi pedido por WhatsApp</a>'
+          : '<button type="button" class="mym-boton mym-ir-formulario">' + esc(CONFIG.textoBoton) + '</button>') + '</div>' +
+      '</div>';
+    var irFormulario = root.querySelector('.mym-ir-formulario');
+    if (irFormulario) irFormulario.addEventListener('click', function () { irA('mayorista'); });
+
+    window.scrollTo(0, 0);
+    var titulo = root.querySelector('.mym-titulo');
+    if (titulo) {
+      try { titulo.focus({ preventScroll: true }); } catch (err) { titulo.focus(); }
+    }
+    cargarCatalogo(root.querySelector('.mym-productos'));
+  }
+
+  var SECCIONES_CATALOGO = [['hombre', 'Hombre'], ['mujer', 'Mujer'], ['adolescentes', 'Adolescentes'], ['ninos', 'Niños']];
+
+  function cargarCatalogo(caja) {
+    if (!caja) return;
+    var api = scriptApi('run');
+    if (!api) { pintarCatalogo(caja, null); return; }
+    var listo = false;
+    var terminar = function (r) {
+      if (listo) return;
+      listo = true;
+      clearTimeout(reloj);
+      pintarCatalogo(caja, r);
+    };
+    var reloj = setTimeout(function () { terminar(null); }, 30000);
+    api.withSuccessHandler(terminar).withFailureHandler(function () { terminar(null); }).catalogoMayorista();
+  }
+
+  function pintarCatalogo(caja, r) {
+    caja.removeAttribute('aria-busy');
+    var tienda = (r && r.tienda) || CONFIG.tiendaWeb;
+    var productos = r && r.ok && r.productos && r.productos.length ? r.productos : [];
+    var verTienda = tienda ? '<a class="mym-boton mym-ver-tienda" href="' + esc(tienda) + '" target="_blank" rel="noopener">Ver todo en ' +
+      esc(String(tienda).replace(/^https?:\/\/(www\.)?/, '').replace(/\/.*$/, '')) + '</a>' : '';
+    if (!productos.length) {
+      caja.innerHTML = '<div class="mym-vacio"><strong>' + esc(conMarca(CONFIG.catalogoVacio)) + '</strong>' +
+        '<span>' + esc(conMarca(CONFIG.catalogoVacioDetalle)) + '</span>' + verTienda + '</div>';
+      return;
+    }
+    var secciones = SECCIONES_CATALOGO.filter(function (s) {
+      return productos.some(function (p) { return (p.secciones || []).indexOf(s[0]) !== -1; });
+    });
+    // Agrupados por tela, en el orden que manda el servidor.
+    var telas = [];
+    productos.forEach(function (p) {
+      var nombre = p.tela || 'Otros';
+      var grupo = telas.filter(function (g) { return g.nombre === nombre; })[0];
+      if (!grupo) { grupo = { nombre: nombre, productos: [] }; telas.push(grupo); }
+      grupo.productos.push(p);
+    });
+    caja.innerHTML =
+      (secciones.length > 1 ? '<div class="mym-secciones" role="group" aria-label="Filtrar productos">' +
+        '<button type="button" class="mym-seccion" data-seccion="" aria-pressed="true">Todo</button>' +
+        secciones.map(function (s) {
+          return '<button type="button" class="mym-seccion" data-seccion="' + s[0] + '" aria-pressed="false">' + s[1] + '</button>';
+        }).join('') + '</div>' : '') +
+      telas.map(function (g) {
+        return '<section class="mym-tela">' + (telas.length > 1 ? '<h3 class="mym-tela-titulo">' + esc(g.nombre) + '</h3>' : '') +
+          '<ul class="mym-grilla">' + g.productos.map(tarjetaProducto).join('') + '</ul></section>';
+      }).join('');
+
+    caja.addEventListener('click', function (e) {
+      var punto = e.target && e.target.closest ? e.target.closest('.mym-color') : null;
+      if (!punto) return;
+      var tarjeta = punto.closest('.mym-producto');
+      var img = tarjeta.querySelector('.mym-foto img');
+      if (img) img.src = punto.getAttribute('data-foto');
+      Array.prototype.forEach.call(tarjeta.querySelectorAll('.mym-color'), function (x) {
+        x.setAttribute('aria-pressed', x === punto ? 'true' : 'false');
+      });
+    });
+
+    var grupo = caja.querySelector('.mym-secciones');
+    if (!grupo) return;
+    grupo.addEventListener('click', function (e) {
+      var b = e.target && e.target.closest ? e.target.closest('.mym-seccion') : null;
+      if (!b) return;
+      var s = b.getAttribute('data-seccion');
+      Array.prototype.forEach.call(grupo.querySelectorAll('.mym-seccion'), function (x) {
+        x.setAttribute('aria-pressed', x === b ? 'true' : 'false');
+      });
+      Array.prototype.forEach.call(caja.querySelectorAll('.mym-producto'), function (li) {
+        li.hidden = !!s && (' ' + li.getAttribute('data-secciones') + ' ').indexOf(' ' + s + ' ') === -1;
+      });
+      Array.prototype.forEach.call(caja.querySelectorAll('.mym-tela'), function (sec) {
+        sec.hidden = !sec.querySelector('.mym-producto:not([hidden])');
+      });
+    });
+  }
+
+  // Colores de la tienda -> color del puntito.
+  var COLORES = {
+    azul: '#25304A', beige: '#D9C8A5', blanco: '#FFFFFF', celeste: '#8DB6D6', chocolate: '#4A2F22',
+    gris: '#8C8E90', marron: '#7A5535', negro: '#1A1A1A', rojo: '#A2302E', tiza: '#E7E2D4', verde: '#566040'
+  };
+
+  function nombreColor(c) {
+    var n = c === 'marron' ? 'marrón' : c;
+    return n.charAt(0).toUpperCase() + n.slice(1);
+  }
+
+  function tarjetaProducto(p) {
+    var colores = p.colores || [];
+    var foto = colores.length ? colores[0].foto : p.foto;
+    return '<li class="mym-producto" data-secciones="' + esc((p.secciones || []).join(' ')) + '">' +
+      '<a href="' + esc(p.link) + '" target="_blank" rel="noopener">' +
+        '<span class="mym-foto">' + (foto ? '<img src="' + esc(foto) + '" alt="" loading="lazy" decoding="async">' : '') + '</span>' +
+        '<span class="mym-producto-texto"><span class="mym-producto-nombre">' + esc(p.titulo) + '</span>' +
+        (p.talles ? '<span class="mym-producto-talles">' + esc(p.talles) + '</span>' : '') + '</span>' +
+      '</a>' +
+      (colores.length > 1 ? '<div class="mym-colores" role="group" aria-label="Colores">' + colores.map(function (c, i) {
+        return '<button type="button" class="mym-color" data-foto="' + esc(c.foto) + '" aria-pressed="' + (i === 0) + '" ' +
+          'aria-label="' + esc(nombreColor(c.nombre)) + '" title="' + esc(nombreColor(c.nombre)) + '" ' +
+          'style="background:' + (COLORES[c.nombre] || '#CCCCCC') + '"></button>';
+      }).join('') + '</div>' : '') +
+    '</li>';
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', iniciar);
+  } else {
+    iniciar();
+  }
+})();
+</script>
+</body>
+</html>
